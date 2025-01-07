@@ -3,15 +3,15 @@ import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 import { getAuth,GoogleAuthProvider } from "firebase/auth";
 import { getFirestore,doc,setDoc } from "firebase/firestore";
-
+//console.log("API Key:", process.env.REACT_APP_API_KEY);
 const firebaseConfig = {
-  apiKey: "AIzaSyAXtvJlZEzA8ef87Nu8sC2bI4Pg_OzBrXk",
-  authDomain: "personal-finance-a2e4e.firebaseapp.com",
-  projectId: "personal-finance-a2e4e",
-  storageBucket: "personal-finance-a2e4e.appspot.com",
-  messagingSenderId: "83031796867",
-  appId: "1:83031796867:web:7a54fa95db5b0fcc6effb6",
-  measurementId: "G-8F7EL1EX8Q"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 // Initialize Firebase

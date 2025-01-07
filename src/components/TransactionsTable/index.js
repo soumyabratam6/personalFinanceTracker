@@ -147,6 +147,7 @@ const TransactionsTable = ({ transactions,addTransaction,fetchTransactions,delet
           style={{
             display: 'flex',
             flexWrap:'wrap',
+            gap:"12rem",
             justifyContent: 'space-between',
             alignItems: 'center',
             width: '100%',

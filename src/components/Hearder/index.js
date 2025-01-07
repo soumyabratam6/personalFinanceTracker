@@ -10,7 +10,9 @@ const Header = () => {
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
   useEffect(() => {
-    if (user) {
+    if (!user) {
+      navigate("/");
+    }else{
       navigate("/dhasboard");
     }
   }, [user, loading, navigate]);
@@ -36,11 +38,10 @@ const Header = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           {/* {console.log('User photoURL:', user.photoURL)} */}
           <img
-            src={user.photoURL ? user.photoURL : userSvg}
+            src={user.photoURL? user.photoURL: userSvg}
             alt="image_user"
             width={user.photoURL ? "32" : "24"}
             style={{ borderRadius: "50%" }}
-            onError={(e) => (e.target.src = userSvg)}
           />
           <p className="logo link" onClick={logoutFun}>
             Logout
